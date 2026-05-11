@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: Library
+  datasource:
+    url: jdbc:sqlserver://localhost;databasename=library;integratedSecurity=false;encrypt=false;trustServerCertificate=false
+    username: sa
+    password: Pa$$w0rd
+
+  # Développement
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
