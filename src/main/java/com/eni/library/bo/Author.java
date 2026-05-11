@@ -32,4 +32,7 @@ public class Author {
 
     @Column(name = "date_de_naissance")
     private LocalDate birthdate;
+
+    @OneToOne(cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.LAZY)
+    private User user;
 }
