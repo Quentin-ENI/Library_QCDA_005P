@@ -5,6 +5,7 @@ import lombok.*;
 
 import java.time.LocalDate;
 
+// Lombok
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
@@ -12,6 +13,7 @@ import java.time.LocalDate;
 @EqualsAndHashCode
 @ToString
 @Builder
+// Data JPA
 @Entity
 @Table(name = "BOOK")
 public class Book {
