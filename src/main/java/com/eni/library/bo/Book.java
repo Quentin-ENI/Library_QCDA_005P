@@ -2,6 +2,7 @@ package com.eni.library.bo;
 
 import jakarta.persistence.*;
 import lombok.*;
+import lombok.experimental.SuperBuilder;
 
 import java.time.LocalDate;
 
@@ -12,13 +13,13 @@ import java.time.LocalDate;
 @Setter
 @EqualsAndHashCode
 @ToString
-@Builder
+@SuperBuilder
 // Data JPA
 @Entity
 @Table(name = "BOOK")
+@Inheritance(strategy = InheritanceType.JOINED)
 public class Book {
     @Id
-//    @GeneratedValue(strategy = GenerationType.IDENTITY) // Auto-incrémentation
     @Column(name = "ISBN")
     private String isbn;
 
