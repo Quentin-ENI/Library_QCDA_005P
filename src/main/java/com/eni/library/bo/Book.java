@@ -23,9 +23,6 @@ public class Book {
     @Column(name = "ISBN")
     private String isbn;
 
-    @Column(name = "AUTHOR", nullable = false, length = 90)
-    private String author;
-
     @Column(name = "RELEASE_DATE", nullable = false)
     private LocalDate releaseDate;
 

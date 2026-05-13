@@ -34,7 +34,6 @@ public class TestBookRepository {
         Book book = Book.builder()
                 .isbn("123-BONJOUR-456")
                 .releaseDate(now)
-                .author("Victor Hugo")
                 .editor("Gallimard")
                 .build();
 
@@ -42,7 +41,6 @@ public class TestBookRepository {
         Book bookDB = this.bookRepository.save(book);
 
         // Assert - Vérification
-        assertEquals("Victor Hugo", bookDB.getAuthor());
         assertEquals("Gallimard", bookDB.getEditor());
         assertEquals("123-BONJOUR-456", bookDB.getIsbn());
         assertEquals(now, bookDB.getReleaseDate());
