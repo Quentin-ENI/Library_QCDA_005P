@@ -28,4 +28,7 @@ public class Book {
 
     @Column(name = "EDITOR", nullable = true)
     private String editor;
+
+    @ManyToOne(optional = false)
+    private Author author;
 }
